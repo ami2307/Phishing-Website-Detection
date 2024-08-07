@@ -1,0 +1,21 @@
+o
+    'û+dD  ã                   @   sŠ   d dl mZmZmZmZ d dlZeeƒZ e e	ddƒ¡Z
+dhZ
+e  d¡d d„ ƒZ
+e jd	d
+gd
+dd
+„ ƒZedkrCe jddddd dS dS )é    )ÚFlaskÚ requestÚResponseÚrender_templateNzphishing.pklÚrbzPlease enter url fieldú/c                   C   s   t dƒS )Nú
+index.html)r   © r	   r	   úYC:\Users\Darshak Kakani\OneDrive\Desktop\Phishing Site URLs Prediction\new phising\app.pyÚhome   s   r
+   z/predictÚPOST)Ú methodsc                  C   sv   g } t j d¡}t|dƒ |r1|  t|ƒ¡ d t  | ¡¡}t|ƒ |dkr)d}nd}t	d |dS |s9t
+t
+d	d
+S d S )
+NZ
+EnterYourSiteZ0000000000000000000000Ú ZbadzThis is a Phishing SitezThis is not a Phishing Siter   )Zprediction_texti  )ÚresponseÚstatus)r   ÚformÚgetÚprintÚappendÚstrÚjoinÚphish_model_lsÚ predictr   r   ÚurlError)Z	X_predictÚurlZ	y_PredictÚresultr	   r	   r
+   r      s"   
+þÿr   Ú__main__Tz 0.0.0.0iˆ  )ÚdebugÚhostÚportÚthreaded)Úflaskr   r   r   r   ÚpickleÚ__name__ÚappÚloadÚopenr   r   Úrouter
+   r   Úrunr	   r	   r	   r
+   Ú<module>   s    ÿ
+
+þ
